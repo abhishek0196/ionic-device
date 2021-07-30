@@ -1,5 +1,7 @@
 {
   "name": "ionic-device",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

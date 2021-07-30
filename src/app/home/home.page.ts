@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Device } from '@ionic-native/device/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private device: Device) {
+    console.log('Device UUID is: ' + this.device.uuid);
+    console.log(`manufacturer: ${this.device.manufacturer}`);
+    console.log(`model: ${this.device.model}`);
+    console.log(`platform: ${this.device.platform}`);
+    console.log(`version: ${this.device.version}`);
+    console.log(`cordova: ${this.device.cordova}`);
+    console.log(`serial: ${this.device.serial}`);
+  }
 
 }
